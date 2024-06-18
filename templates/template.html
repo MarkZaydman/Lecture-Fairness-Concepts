@@ -61,9 +61,13 @@
         </main>
       </section>
       <section id="fairness-through-unawareness-limitations">
-        <h2>Unawareness is difficult to accomplish</h2>
+        <h2>Fairness through unawareness</h2>
         <main>
-          <div class="column">
+          <div class="column" id="credit-column">
+            <h4 style="text-decoration: underline">Limitation</h4>
+            <p>Unawareness may not be achievable</p>
+          </div>
+          <div class="column" id="content-column">
             <img
               src="{{assets_dir}}/feature-correlations.png"
               alt="feature-correlations"
@@ -78,8 +82,73 @@
           </div>
         </main>
       </section>
-      <section id="individual-fairness"></section>
-      <section id="group-fairness"></section>
+      <section id="individual-fairness">
+        <h2>Individual fairness</h2>
+        <main>
+          <div class="column">
+            <p>"Similar" individuals should be treated "similarly"</p>
+            <br />
+            <img
+              src="{{assets_dir}}/individual-fairness.png"
+              alt="individual-fairness"
+            />
+          </div>
+        </main>
+      </section>
+      <section id="individual-fairness-limitation">
+        <h2>Individual fairness</h2>
+        <main>
+          <div class="column">
+            <p>"Similar" individuals should be treated "similarly"</p>
+            <br />
+            <img
+              src="{{assets_dir}}/individual-fairness.png"
+              alt="individual-fairness"
+            />
+            <br />
+            <p
+              style="
+                text-align: center;
+                border: solid;
+                border-radius: 10px;
+                border-color: #a51417;
+              "
+            >
+              Limitation: the choice of features used to gauge individual
+              similarity may introduce bias
+            </p>
+          </div>
+        </main>
+      </section>
+      <section id="group-fairness">
+        <h2>Group fairness</h2>
+        <main>
+          <div class="column">
+            <p>
+              The idea that people should be treated similarly regardless of
+              their group membership
+            </p>
+          </div>
+          <div class="column"></div>
+        </main>
+      </section>
+      <section id="group-fairness-limitations">
+        <h2>Group fairness</h2>
+        <main>
+          <div class="column">
+            <h4>Problems with group labels</h4>
+            <ul>
+              <li>Societal constructs</li>
+              <li>Nonrandom missingness and unreliability</li>
+              <li>Group heterogeneity</li>
+              <li>Intersectionality</li>
+            </ul>
+          </div>
+          <div class="column">
+            <img src="{{assets_dir}}/.png" alt="which-group" />
+          </div>
+        </main>
+      </section>
       <section id="demographic-parity"></section>
       <section id="equalized-odd"></section>
       <section id="predictive-parity"></section>
