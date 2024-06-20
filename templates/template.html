@@ -307,7 +307,7 @@
             <img
               src="{{assets_dir}}/pred_parity_scenario.png"
               alt="predictive-parity-scenario"
-              style="width: 425px"
+              style="width: 450px"
             />
           </div>
         </main>
@@ -322,7 +322,7 @@
       <section id="group-concept-exclusivity">
         <h2>Exclusivity of group fairness concepts</h2>
         <main>
-          <div class="colum">
+          <div class="column">
             <img
               src="{{assets_dir}}/group_fairness.png"
               alt="group-fairness-exclusivity"
@@ -336,21 +336,111 @@
           113–128
         </div>
       </section>
-      <section id="equity"></section>
-      <section id="concept-summary"></section>
+      <section id="group-concept-exclusivity">
+        <h2>Exclusivity of group fairness concepts</h2>
+        <br /><br />
+        <main>
+          <div class="column">
+            <p>
+              It is not possible to satisfy all group fairness concepts unless:
+            </p>
+            <ol>
+              <li>The algorithm lacks any predictive skill</li>
+              <li>The base rate of the disease is the same across groups</li>
+            </ol>
+            <br /><br /><br />
+            <p
+              style="
+                text-align: center;
+                border: solid;
+                border-radius: 10px;
+                font-size: xx-large;
+              "
+            >
+              It is not possible to have a perfectly fair algorithm in an unfair
+              world
+            </p>
+          </div>
+        </main>
+      </section>
+
+      <section id="equity">
+        <h2>Equalized outcomes (equity)</h2>
+
+        <main>
+          <div class="column">
+            <p>
+              The notion that fairness occurs when all individuals get the same
+              opportunity to enjoy good health
+            </p>
+            <br />
+            <img
+              src="{{assets_dir}}/equity.png"
+              alt="equity"
+              style="width: 550px"
+            />
+          </div>
+        </main>
+        <div class="reference">
+          https://interactioninstitute.org/illustrating-equality-vs-equity/
+        </div>
+      </section>
+      <section id="concept-summary">
+        <h2>Key take away points</h2>
+        <main>
+          <div class="column">
+            <ol>
+              <li>There are many definitions of fairness</li>
+              <li>Different definitions may be in conflict</li>
+              <li>
+                It is best to prioritize equity over intermediate statistical
+                notions
+              </li>
+            </ol>
+          </div>
+        </main>
+      </section>
     </article>
 
     <article id="Obermeyer Study - Fairness ">
-      <section id="obermeyer-background"></section>
-      <section id="obermeyer-individual-fairness"></section>
-      <section id="obermeyer-demographic-parity"></section>
-      <section id="obermeyer-equalized-odds"></section>
-      <section id="obermeyer-predictive-parity"></section>
-      <section id="obermeyer-equity"></section>
+      <section id="obermeyer-individual-fairness">
+        <h2>
+          The algorithm in the Obermeyer study violated many fairness notions
+        </h2>
+        <main>
+          <div class="column">
+            <ul>
+              <li>Fairness through unawareness</li>
+              <li>Individual fairness</li>
+              <li>Demographic parity</li>
+              <li>Equalized odds</li>
+              <li>Predictive parity</li>
+              <li>Equalized outcomes</li>
+            </ul>
+          </div>
+          <div class="column">
+            <img src="{{assets_dir}}/obermeyer.jpeg" alt="obermeyer-result" />
+          </div>
+        </main>
+      </section>
     </article>
 
     <article id="moving forward">
-      <section id="building-fairness-infrastructure"></section>
+      <section id="building-fairness-infrastructure">
+        <h2>
+          What is needed to operationalize fairness metrics as a quality domain
+        </h2>
+        <main>
+          <div class="column">
+            <h4>Training and education</h4>
+            <h4>Data infrastucture</h4>
+            <h4>Analytical tools</h4>
+            <h4>Benchmarks and accountability</h4>
+            <h4>Standards and processes</h4>
+          </div>
+          <div class="column"></div>
+        </main>
+      </section>
       <section id="call-to-action"></section>
     </article>
 
