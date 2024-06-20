@@ -84,7 +84,7 @@
             <ol>
               <li>Define fairness concepts</li>
               <li>Apply fairness concepts</li>
-              <li>Operationalizing fairness monitoring</li>
+              <li>Operationalizing fairness</li>
             </ol>
           </div>
           <div class="column" id="right-column">
@@ -138,7 +138,6 @@
         <h2>Individual fairness</h2>
         <main>
           <div class="column">
-            <br />
             <p>"Similar" individuals should be treated "similarly"</p>
           </div>
           <div class="column">
@@ -229,19 +228,32 @@
         <main>
           <div class="column">
             <h2>Demographic parity</h2>
-            <b></b>
+            <br />
             <p>
               The algorithmic output should be independent of group membership
             </p>
-          </div>
-          <div class="column">
+            <br /><br />
             <img
-              src="{{assets_dir}}/demographic_parity.png"
-              alt="demographic-parity"
+              src="{{assets_dir}}/demographic_parity_scorecard.png"
+              alt="demographic-parity-scorecard"
               style="width: 350px"
             />
           </div>
+          <div class="column">
+            <img
+              src="{{assets_dir}}/demographic_parity_scenario.png"
+              alt="demographic-parity-scenario"
+              style="width: 450px"
+            />
+          </div>
         </main>
+        <br />
+        <div class="reference">
+          Vahid Azimi, Mark A Zaydman, Optimizing Equity: Working towards Fair
+          Machine Learning Algorithms in Laboratory Medicine, The Journal of
+          Applied Laboratory Medicine, Volume 8, Issue 1, January 2023, Pages
+          113–128
+        </div>
       </section>
       <section id="equalized-odds">
         <main>
@@ -250,21 +262,30 @@
             <br />
             <p>
               The algorithmic output should be independent of group membership
-              when conditioned on the presence of the disease
+              when conditioned upon the true outcome
             </p>
             <br /><br />
-            <p style="border: solid; border-radius: 10px">
-              The sensitivity and specificity should be similar across groups
-            </p>
+            <img
+              src="{{assets_dir}}/equalized_odds_scorecard.png"
+              alt="equalized-odds-scorecard"
+              style="width: 150px"
+            />
           </div>
           <div class="column">
             <img
-              src="{{assets_dir}}/equalized_odds.png"
-              alt="equalized-odds"
-              style="width: 350px"
+              src="{{assets_dir}}/equalized_odds_scenario.png"
+              alt="equalized-odds-scenario"
+              style="width: 450px"
             />
           </div>
         </main>
+        <br />
+        <div class="reference">
+          Vahid Azimi, Mark A Zaydman, Optimizing Equity: Working towards Fair
+          Machine Learning Algorithms in Laboratory Medicine, The Journal of
+          Applied Laboratory Medicine, Volume 8, Issue 1, January 2023, Pages
+          113–128
+        </div>
       </section>
       <section id="predictive-parity">
         <main>
@@ -272,25 +293,49 @@
             <h2>Predictive parity</h2>
             <br />
             <p>
-              The probability of the disease should be independent of group
-              membership when conditioned upon the outcome
+              The probability of the true outcome should be independent of group
+              membership when conditioned upon the algorithmic output
             </p>
             <br /><br />
-            <p style="border: solid; border-radius: 10px">
-              Translation: the positive and negative predictive values should be
-              similar across groups
-            </p>
+            <img
+              src="{{assets_dir}}/pred_parity_scorecard.png"
+              alt="predictive-parity-scorecard"
+              style="width: 200px"
+            />
           </div>
           <div class="column">
             <img
-              src="{{assets_dir}}/pred_parity.png"
-              alt="predictive parity"
-              style="width: 350px"
+              src="{{assets_dir}}/pred_parity_scenario.png"
+              alt="predictive-parity-scenario"
+              style="width: 425px"
             />
           </div>
         </main>
+        <br />
+        <div class="reference">
+          Vahid Azimi, Mark A Zaydman, Optimizing Equity: Working towards Fair
+          Machine Learning Algorithms in Laboratory Medicine, The Journal of
+          Applied Laboratory Medicine, Volume 8, Issue 1, January 2023, Pages
+          113–128
+        </div>
       </section>
-      <section id="group-concept-exclusivity"></section>
+      <section id="group-concept-exclusivity">
+        <h2>Exclusivity of group fairness concepts</h2>
+        <main>
+          <div class="colum">
+            <img
+              src="{{assets_dir}}/group_fairness.png"
+              alt="group-fairness-exclusivity"
+            />
+          </div>
+        </main>
+        <div class="reference">
+          Vahid Azimi, Mark A Zaydman, Optimizing Equity: Working towards Fair
+          Machine Learning Algorithms in Laboratory Medicine, The Journal of
+          Applied Laboratory Medicine, Volume 8, Issue 1, January 2023, Pages
+          113–128
+        </div>
+      </section>
       <section id="equity"></section>
       <section id="concept-summary"></section>
     </article>
