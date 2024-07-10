@@ -19,6 +19,32 @@
     </article>
 
     <article id="Introduction">
+      <section id="obermeyer-story">
+        <main>
+          <div class="column" id="left-column">
+            <h2>An unfair algorithm</h2>
+
+            <br />
+            <p>
+              Black patient's had to be sicker than White patients to receive
+              the same risk score and additional resources
+            </p>
+            <br /><br /><br /><br /><br />
+            <div class="reference">
+              Ziad Obermeyer et al. ,Dissecting racial bias in an algorithm used
+              to manage the health of populations. Science 366,447-453(2019).
+            </div>
+          </div>
+          <div class="column" id="right-column">
+            <img
+              src="{{assets_dir}}/obermeyer.jpeg"
+              alt="obermeyer-result"
+              style="width: 550px; margin-top: 0px; padding-top: 0px"
+            />
+          </div>
+        </main>
+      </section>
+
       <section id="general-fairness-definition">
         <h2>General definition of algorithmic fairness</h2>
         <main>
@@ -34,37 +60,16 @@
           </div>
         </main>
       </section>
-      <section id="obermeyer-story">
-        <main>
-          <div class="column">
-            <h2>An example of an unfair algorithm</h2>
 
-            <br />
-            <p>
-              Black patient's had to be sicker than White patients to receive
-              the same risk score
-            </p>
-          </div>
-          <div class="column">
-            <img src="{{assets_dir}}/obermeyer.jpeg" alt="obermeyer-result" />
-            <div class="reference">
-              Ziad Obermeyer et al. ,Dissecting racial bias in an algorithm used
-              to manage the health of populations.Science366,447-453(2019).
-            </div>
-          </div>
-        </main>
-      </section>
       <section id="need-to-measure">
-        <h2>
-          A formal understanding and definition of algorithmic fairness is
-          needed
-        </h2>
+        <h2>A formal definition of algorithmic fairness is needed</h2>
         <main>
-          <div class="column">
-            <h5>Motivation</h5>
+          <div class="column" style="margin-left: 20px">
+            <h4>Motivation</h4>
             <ul>
-              <li>Conceptualize</li>
               <li>Benchmarking</li>
+              <li>Accountability</li>
+              <li>Standardization</li>
               <li>Quality assurance</li>
             </ul>
           </div>
@@ -73,10 +78,11 @@
               src="{{assets_dir}}/need-to-measure.jpg"
               alt="need-to-measure"
             />
-            <div class="referenc">Image created by Dall-E</div>
+            <div class="reference">Image created by Dall-E</div>
           </div>
         </main>
       </section>
+
       <section id="outline">
         <h2>Content of this talk</h2>
         <main>
@@ -84,7 +90,7 @@
             <ol>
               <li>Define fairness concepts</li>
               <li>Apply fairness concepts</li>
-              <li>Operationalizing fairness</li>
+              <li>Challenges to operationalizing fairness concepts</li>
             </ol>
           </div>
           <div class="column" id="right-column">
@@ -105,6 +111,15 @@
               An algorithm that is blinded to sensitive patient attributes will
               not exhibit biases based on those attributes
             </p>
+            <br />
+            <h4>Sensitive attributes</h4>
+            <ul>
+              <li>Race</li>
+              <li>Gender</li>
+              <li>Sexual orientation</li>
+              <li>Religion</li>
+              <li>Disability status</li>
+            </ul>
           </div>
           <div class="column" id="column">
             <img src="{{assets_dir}}/head_in_sand.jpg" alt="head-in-sand" />
@@ -118,19 +133,20 @@
           <div class="column" id="credit-column">
             <h4 style="text-decoration: underline">Limitation</h4>
             <p>Unawareness may not be achievable</p>
-          </div>
-          <div class="column" id="content-column">
-            <img
-              src="{{assets_dir}}/feature-correlations.png"
-              alt="feature-correlations"
-              style="width: 700px"
-            />
+            <br /><br />
             <div class="reference">
               Vahid Azimi, Mark A Zaydman, Optimizing Equity: Working towards
               Fair Machine Learning Algorithms in Laboratory Medicine, The
               Journal of Applied Laboratory Medicine, Volume 8, Issue 1, January
               2023, Pages 113–128
             </div>
+          </div>
+          <div class="column" id="content-column">
+            <img
+              src="{{assets_dir}}/feature-correlations.png"
+              alt="feature-correlations"
+              style="width: 900px"
+            />
           </div>
         </main>
       </section>
@@ -264,11 +280,11 @@
               The algorithmic output should be independent of group membership
               when conditioned upon the true outcome
             </p>
-            <br /><br />
+            <br />
             <img
               src="{{assets_dir}}/equalized_odds_scorecard.png"
               alt="equalized-odds-scorecard"
-              style="width: 150px"
+              style="width: 200px"
             />
           </div>
           <div class="column">
@@ -300,7 +316,7 @@
             <img
               src="{{assets_dir}}/pred_parity_scorecard.png"
               alt="predictive-parity-scorecard"
-              style="width: 200px"
+              style="width: 250px"
             />
           </div>
           <div class="column">
@@ -336,6 +352,24 @@
           113–128
         </div>
       </section>
+
+      <section id="group-concept-exclusivity">
+        <h2>Exclusivity of group fairness concepts</h2>
+        <br /><br />
+        <main>
+          <div class="column">
+            <p>
+              It is not possible to satisfy all group fairness concepts unless:
+            </p>
+            <ol>
+              <li>The algorithm lacks any predictive skill</li>
+              <li>The base rate of the disease is the same across groups</li>
+            </ol>
+            <br /><br /><br />
+          </div>
+        </main>
+      </section>
+
       <section id="group-concept-exclusivity">
         <h2>Exclusivity of group fairness concepts</h2>
         <br /><br />
@@ -355,6 +389,7 @@
                 border: solid;
                 border-radius: 10px;
                 font-size: xx-large;
+                font-weight: bold;
               "
             >
               It is not possible to have a perfectly fair algorithm in an unfair
@@ -366,7 +401,6 @@
 
       <section id="equity">
         <h2>Equalized outcomes (equity)</h2>
-
         <main>
           <div class="column">
             <p>
@@ -385,30 +419,12 @@
           https://interactioninstitute.org/illustrating-equality-vs-equity/
         </div>
       </section>
-      <section id="concept-summary">
-        <h2>Key take away points</h2>
-        <main>
-          <div class="column">
-            <ol>
-              <li>There are many definitions of fairness</li>
-              <li>Different definitions may be in conflict</li>
-              <li>
-                It is best to prioritize equity over intermediate statistical
-                notions
-              </li>
-            </ol>
-          </div>
-        </main>
-      </section>
-    </article>
 
-    <article id="Obermeyer Study - Fairness ">
-      <section id="obermeyer-individual-fairness">
-        <h2>
-          The algorithm in the Obermeyer study violated many fairness notions
-        </h2>
+      <section id="obermeyer-apply-intro">
         <main>
-          <div class="column">
+          <div class="column" id="left-column">
+            <h2>Applying fairness concepts</h2>
+            <br />
             <ul>
               <li>Fairness through unawareness</li>
               <li>Individual fairness</li>
@@ -416,10 +432,124 @@
               <li>Equalized odds</li>
               <li>Predictive parity</li>
               <li>Equalized outcomes</li>
+              <li>Equity</li>
             </ul>
+            <div class="reference">
+              Ziad Obermeyer et al. ,Dissecting racial bias in an algorithm used
+              to manage the health of populations. Science 366,447-453(2019).
+            </div>
           </div>
-          <div class="column">
-            <img src="{{assets_dir}}/obermeyer.jpeg" alt="obermeyer-result" />
+          <div class="column" id="right-column">
+            <img
+              src="{{assets_dir}}/obermeyer.jpeg"
+              alt="obermeyer-result"
+              style="width: 550px; margin-top: 0px; padding-top: 0px"
+            />
+          </div>
+        </main>
+      </section>
+
+      <section id="obermeyer-fairness-through-unawareness">
+        <main>
+          <div class="column" id="left-column">
+            <h2>Fairness through unawareness</h2>
+          </div>
+          <div class="column" id="right-column">
+            <img
+              src="{{assets_dir}}/obermeyer.jpeg"
+              alt="obermeyer-result"
+              style="width: 550px; margin-top: 0px; padding-top: 0px"
+            />
+          </div>
+        </main>
+      </section>
+
+      <section id="obermeyer-individual-fairness">
+        <main>
+          <div class="column" id="left-column">
+            <h2>Individual fairness</h2>
+          </div>
+          <div class="column" id="right-column">
+            <img
+              src="{{assets_dir}}/obermeyer.jpeg"
+              alt="obermeyer-result"
+              style="width: 550px; margin-top: 0px; padding-top: 0px"
+            />
+          </div>
+        </main>
+      </section>
+
+      <section id="obermeyer-demographic-parity">
+        <main>
+          <div class="column" id="left-column">
+            <h2>Demographic parity</h2>
+          </div>
+          <div class="column" id="right-column">
+            <img
+              src="{{assets_dir}}/obermeyer.jpeg"
+              alt="obermeyer-result"
+              style="width: 550px; margin-top: 0px; padding-top: 0px"
+            />
+          </div>
+        </main>
+      </section>
+
+      <section id="obermeyer-equalized-odds">
+        <main>
+          <div class="column" id="left-column">
+            <h2>Equalized odds</h2>
+          </div>
+          <div class="column" id="right-column">
+            <img
+              src="{{assets_dir}}/obermeyer.jpeg"
+              alt="obermeyer-result"
+              style="width: 550px; margin-top: 0px; padding-top: 0px"
+            />
+          </div>
+        </main>
+      </section>
+
+      <section id="obermeyer-predictive-parity">
+        <main>
+          <div class="column" id="left-column">
+            <h2>Predictive parity</h2>
+          </div>
+          <div class="column" id="right-column">
+            <img
+              src="{{assets_dir}}/obermeyer.jpeg"
+              alt="obermeyer-result"
+              style="width: 550px; margin-top: 0px; padding-top: 0px"
+            />
+          </div>
+        </main>
+      </section>
+
+      <section id="obermeyer-equalized-outcomes">
+        <main>
+          <div class="column" id="left-column">
+            <h2>Equalized outcomes</h2>
+          </div>
+          <div class="column" id="right-column">
+            <img
+              src="{{assets_dir}}/obermeyer.jpeg"
+              alt="obermeyer-result"
+              style="width: 550px; margin-top: 0px; padding-top: 0px"
+            />
+          </div>
+        </main>
+      </section>
+
+      <section id="obermeyer-equity">
+        <main>
+          <div class="column" id="left-column">
+            <h2>Equity</h2>
+          </div>
+          <div class="column" id="right-column">
+            <img
+              src="{{assets_dir}}/obermeyer.jpeg"
+              alt="obermeyer-result"
+              style="width: 550px; margin-top: 0px; padding-top: 0px"
+            />
           </div>
         </main>
       </section>
@@ -428,7 +558,7 @@
     <article id="moving forward">
       <section id="building-fairness-infrastructure">
         <h2>
-          What is needed to operationalize fairness metrics as a quality domain
+          What is needed to operationalize fairness metrics as a quality domain?
         </h2>
         <main>
           <div class="column">
@@ -441,9 +571,62 @@
           <div class="column"></div>
         </main>
       </section>
-      <section id="call-to-action"></section>
     </article>
 
-    <article id="aknowledgements"></article>
+    <article id="summary">
+      <section id="concept-summary">
+        <h2>Key take away points</h2>
+        <main>
+          <div class="column">
+            <ol>
+              <li>There are many definitions of fairness</li>
+              <li>Different definitions may be in conflict</li>
+              <li>
+                It is best to prioritize equity over intermediate statistical
+                notions
+              </li>
+              <li>
+                There are many challenges to translating fairness metrics into
+                current laboratory practice
+              </li>
+            </ol>
+          </div>
+        </main>
+      </section>
+    </article>
+
+    <article id="aknowledgements">
+      <section id="aknowledgements-slide">
+        <h2>Aknowledgements</h2>
+        <main>
+          <div class="column" id="left-column">
+            <img
+              src="{{assets_dir}}/azimi.jpeg"
+              alt="vahid-azimi"
+              style="width: 200px; margin-left: 0px"
+            />
+            <h4>Vahid Azimi, MD</h4>
+            <p style="font-size: 18px">
+              Assistant Professor<br />
+              Department of Pathology and Immunology<br />
+              Washington University School of Medicine
+            </p>
+          </div>
+          <div class="column" id="right-column">
+            <img
+              src="{{assets_dir}}/jalmcover.png"
+              alt="jalm-cover"
+              style="width: 300px"
+            />
+          </div>
+        </main>
+        <div class="reference">
+          Vahid Azimi, Mark A Zaydman, Optimizing Equity: Working towards Fair
+          Machine Learning Algorithms in Laboratory Medicine, The Journal of
+          Applied Laboratory Medicine, Volume 8, Issue 1, January 2023, Pages
+          113–128
+        </div>
+      </section>
+    </article>
   </body>
 </html>
