@@ -432,12 +432,7 @@
               <li>Equalized odds</li>
               <li>Predictive parity</li>
               <li>Equalized outcomes</li>
-              <li>Equity</li>
             </ul>
-            <div class="reference">
-              Ziad Obermeyer et al. ,Dissecting racial bias in an algorithm used
-              to manage the health of populations. Science 366,447-453(2019).
-            </div>
           </div>
           <div class="column" id="right-column">
             <img
@@ -451,15 +446,23 @@
 
       <section id="obermeyer-fairness-through-unawareness">
         <main>
-          <div class="column" id="left-column">
+          <div class="column">
             <h2>Fairness through unawareness</h2>
-          </div>
-          <div class="column" id="right-column">
-            <img
-              src="{{assets_dir}}/obermeyer.jpeg"
-              alt="obermeyer-result"
-              style="width: 550px; margin-top: 0px; padding-top: 0px"
-            />
+            <br />
+            <p>
+              The algorithm should be blinded to sensitive patient attributes
+            </p>
+            <br /><br /><br /><br /><br />
+            <p style="font-style: italic">
+              "...the algorithm takes in a large set of raw insurance claims
+              data (features) over the year t − 1: demographics (e.g., age,
+              sex), insurance type, diagnosis and procedure codes, medications,
+              and detailed costs.
+              <strong>
+                Notably, the algorithm specifically excludes race. </strong
+              >" (Obermeyer et al., page 3)
+            </p>
+            <!-- </div> -->
           </div>
         </main>
       </section>
@@ -468,42 +471,60 @@
         <main>
           <div class="column" id="left-column">
             <h2>Individual fairness</h2>
+            <br />
+            <p>
+              Similar individuals should be treated similarly by the algorithm
+            </p>
           </div>
           <div class="column" id="right-column">
             <img
-              src="{{assets_dir}}/obermeyer.jpeg"
-              alt="obermeyer-result"
-              style="width: 550px; margin-top: 0px; padding-top: 0px"
+              src="{{assets_dir}}/obermeyer_costs.png"
+              alt="obermeyer-costs"
+              style="width: 575px; margin-top: 0px; padding-top: 0px"
             />
           </div>
         </main>
       </section>
 
       <section id="obermeyer-demographic-parity">
+        <h2>Demographic parity</h2>
+        <br />
+        <p>Algorithmic output should be independent of group membership</p>
+        <br /><br />
+        <h4>Black patients represented</h4>
         <main>
           <div class="column" id="left-column">
-            <h2>Demographic parity</h2>
+            <h4 style="font-size: 64px">12.3%</h4>
+            <p>of total cohort</p>
           </div>
           <div class="column" id="right-column">
-            <img
-              src="{{assets_dir}}/obermeyer.jpeg"
-              alt="obermeyer-result"
-              style="width: 550px; margin-top: 0px; padding-top: 0px"
-            />
+            <h4 style="font-size: 64px">17.7%</h4>
+            <p>of those auto-enrolled based on algorithmic score</p>
           </div>
         </main>
+        <br /><br />
+        <p style="text-align: center">
+          (Should have been
+          <strong>46.5%</strong> if similarly sick patients received equal
+          score)
+        </p>
       </section>
 
       <section id="obermeyer-equalized-odds">
         <main>
           <div class="column" id="left-column">
             <h2>Equalized odds</h2>
+            <br />
+            <p>
+              Algorithmic output should be independent of group membership when
+              conditioned upon the true outcome
+            </p>
           </div>
           <div class="column" id="right-column">
             <img
-              src="{{assets_dir}}/obermeyer.jpeg"
-              alt="obermeyer-result"
-              style="width: 550px; margin-top: 0px; padding-top: 0px"
+              src="{{assets_dir}}/obermeyer-equalized-odds.png"
+              alt="obermeyer-equalized-odd"
+              style="width: 600px; margin-top: 0px; padding-top: 0px"
             />
           </div>
         </main>
@@ -513,10 +534,15 @@
         <main>
           <div class="column" id="left-column">
             <h2>Predictive parity</h2>
+            <br />
+            <p>
+              Probability of the true outcome should be independent of group
+              membership when conditioned upon the algorithmic output
+            </p>
           </div>
           <div class="column" id="right-column">
             <img
-              src="{{assets_dir}}/obermeyer.jpeg"
+              src="{{assets_dir}}/obermeyer-predictive-parity.jpeg"
               alt="obermeyer-result"
               style="width: 550px; margin-top: 0px; padding-top: 0px"
             />
@@ -528,28 +554,16 @@
         <main>
           <div class="column" id="left-column">
             <h2>Equalized outcomes</h2>
+            <br />
+            <p>The algorithm should not widen disparities in health outcomes</p>
           </div>
           <div class="column" id="right-column">
             <img
-              src="{{assets_dir}}/obermeyer.jpeg"
+              src="{{assets_dir}}/obermeyer-equity.jpg"
               alt="obermeyer-result"
-              style="width: 550px; margin-top: 0px; padding-top: 0px"
+              style="width: 500px; margin-top: 0px; padding-top: 0px"
             />
-          </div>
-        </main>
-      </section>
-
-      <section id="obermeyer-equity">
-        <main>
-          <div class="column" id="left-column">
-            <h2>Equity</h2>
-          </div>
-          <div class="column" id="right-column">
-            <img
-              src="{{assets_dir}}/obermeyer.jpeg"
-              alt="obermeyer-result"
-              style="width: 550px; margin-top: 0px; padding-top: 0px"
-            />
+            <div class="reference">Image created by Dall-E</div>
           </div>
         </main>
       </section>
@@ -562,13 +576,21 @@
         </h2>
         <main>
           <div class="column">
-            <h4>Training and education</h4>
-            <h4>Data infrastucture</h4>
-            <h4>Analytical tools</h4>
-            <h4>Benchmarks and accountability</h4>
-            <h4>Standards and processes</h4>
+            <ul>
+              <li>Training and education</li>
+              <li>Data and analytics</li>
+              <li>Standards and processes</li>
+              <li>Benchmarks and accountability</li>
+            </ul>
           </div>
-          <div class="column"></div>
+          <div class="column">
+            <img
+              src="{{assets_dir}}/call-to-action.jpg"
+              alt="obermeyer-result"
+              style="width: 500px; margin-top: 0px; padding-top: 0px"
+            />
+            <div class="reference">Image created by Dall-E</div>
+          </div>
         </main>
       </section>
     </article>
@@ -599,12 +621,14 @@
       <section id="aknowledgements-slide">
         <h2>Aknowledgements</h2>
         <main>
-          <div class="column" id="left-column">
+          <div class="column" id="column">
             <img
               src="{{assets_dir}}/azimi.jpeg"
               alt="vahid-azimi"
-              style="width: 200px; margin-left: 0px"
+              style="width: 300px; margin-left: 40px"
             />
+          </div>
+          <div class="column" style="margin-left: 0px; padding-left: 0px">
             <h4>Vahid Azimi, MD</h4>
             <p style="font-size: 18px">
               Assistant Professor<br />
@@ -612,11 +636,11 @@
               Washington University School of Medicine
             </p>
           </div>
-          <div class="column" id="right-column">
+          <div class="column" id="column">
             <img
               src="{{assets_dir}}/jalmcover.png"
               alt="jalm-cover"
-              style="width: 300px"
+              style="width: 320px"
             />
           </div>
         </main>
