@@ -108,8 +108,8 @@
 html {
     color: #393939;
     font-family: source sans pro, sans-serif;
-    font-size: 11pt;
-    font-weight: 300;
+    font-size: 14pt;
+    font-weight: 400;
     line-height: 1.5;
 }
 
@@ -288,12 +288,12 @@ html body article#cover section {
 main {
   flex: 1;
   display: flex; /* This line is crucial for side-by-side layout */
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right:10px;
-  padding-bottom: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right:5px;
+  padding-bottom:5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   
   /* justify-content: center; */
   /* align-self: center; */
@@ -349,16 +349,18 @@ ul {
 }
 
 ul > li {
-  font-size: 18pt;
+  font-size: 20pt;
   margin-left:5px;
   padding:2px;
   font-weight: normal;
 }
 
 ol > li {
-  font-size: 18pt;
+  font-size: 20pt;
   margin:0px;
   padding:2px;
+  font-weight: normal;
+
 }
 
 dl {
